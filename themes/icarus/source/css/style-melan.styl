@@ -1,0 +1,57 @@
+@import "nib"
+shadow-mask(alpha = 0.4)
+    rgba(0, 0, 0, alpha)
+
+light-mask(alpha = 0.4)
+    rgba(255, 255, 255, alpha)
+
+$-main-word-light-gray-color = #ddd
+$-main-word-color = #efefef
+$-main-word-light-color = #fff
+$-link-word-color = #38b7ea
+$-link-word-bule-light-color = #66E3FF
+$-link-word-cyan-color = #97f9f9
+
+transform()
+    -webkit-transform: arguments
+    -moz-transform: arguments
+    -ms-transform: arguments
+    -o-transform: arguments
+    transform: arguments
+
+transition()
+    -webkit-transition: arguments
+    -moz-transition: arguments
+    -ms-transition: arguments
+    -o-transition: arguments
+    transition: arguments
+
+border-radius()
+    -webkit-border-radius: arguments
+    -moz-border-radius: arguments
+    border-radius: arguments
+
+link-blue-trans()
+    transition(all 0.2s ease)
+    color: $-link-word-color
+
+selection_clean()
+    selection_style()
+        color: #fff
+        background: #338fff
+        text-shadow: none
+    &::selection
+        selection_style()
+    &::-moz-selection
+        selection_style()
+
+@import "_schemes/melan/body"
+@import "_schemes/melan/header"
+@import "_schemes/melan/profile"
+@import "_schemes/melan/article"
+@import "_schemes/melan/sidebar"
+@import "_schemes/melan/timeline"
+@import "_schemes/melan/archive"
+@import "_schemes/melan/insight"
+@import "_schemes/melan/comments"
+
